@@ -132,19 +132,6 @@
                 href="https://AIIshanova.github.io/tag/group-project/"
                 />
   </url><url>
-    <loc>https://AIIshanova.github.io/project/</loc>
-    <lastmod>2021-05-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://AIIshanova.github.io/ru/project/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://AIIshanova.github.io/project/"
-                />
-  </url><url>
     <loc>https://AIIshanova.github.io/project/example/</loc>
     <lastmod>2021-05-08T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -158,17 +145,17 @@
                 href="https://AIIshanova.github.io/project/example/"
                 />
   </url><url>
-    <loc>https://AIIshanova.github.io/tag/personal-project/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+    <loc>https://AIIshanova.github.io/project/</loc>
+    <lastmod>2021-05-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://AIIshanova.github.io/ru/tag/personal-project/"
+                href="https://AIIshanova.github.io/ru/project/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://AIIshanova.github.io/tag/personal-project/"
+                href="https://AIIshanova.github.io/project/"
                 />
   </url><url>
     <loc>https://AIIshanova.github.io/project/personal-project/</loc>
@@ -182,6 +169,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://AIIshanova.github.io/project/personal-project/"
+                />
+  </url><url>
+    <loc>https://AIIshanova.github.io/tag/personal-project/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://AIIshanova.github.io/ru/tag/personal-project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://AIIshanova.github.io/tag/personal-project/"
                 />
   </url><url>
     <loc>https://AIIshanova.github.io/admin/</loc>

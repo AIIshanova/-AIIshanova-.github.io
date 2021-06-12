@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Проект № 5 &#34;Задача об эпидемии&#34;" />
+  <meta name="description" content="Priject № 5 &#34;Epidemic&#34;" />
 
   
     <link rel="alternate" hreflang="ru" href="https://AIIshanova.github.io/ru/project/example/" />
@@ -272,8 +272,8 @@
     <link rel="manifest" href="/index.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_32x32_fill_lanczos_center_2.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_180x180_fill_lanczos_center_2.png" />
+  <link rel="icon" type="image/png" href="/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_180x180_fill_lanczos_center_2.png" />
 
   <link rel="canonical" href="https://AIIshanova.github.io/project/example/" />
 
@@ -293,9 +293,9 @@
   
   <meta property="og:site_name" content="Ishanova A.I." />
   <meta property="og:url" content="https://AIIshanova.github.io/project/example/" />
-  <meta property="og:title" content="Групповой проект &lt;Этап 1&gt; | Ishanova A.I." />
-  <meta property="og:description" content="Проект № 5 &#34;Задача об эпидемии&#34;" /><meta property="og:image" content="https://AIIshanova.github.io/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="https://AIIshanova.github.io/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:title" content="Group project | Ishanova A.I." />
+  <meta property="og:description" content="Priject № 5 &#34;Epidemic&#34;" /><meta property="og:image" content="https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png" />
+    <meta property="twitter:image" content="https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -327,7 +327,7 @@
     "@type": "WebPage",
     "@id": "https://AIIshanova.github.io/project/example/"
   },
-  "headline": "Групповой проект \u003cЭтап 1\u003e",
+  "headline": "Group project",
   
   "datePublished": "2021-05-08T00:00:00Z",
   "dateModified": "2021-05-08T00:00:00Z",
@@ -342,10 +342,10 @@
     "name": "Ishanova A.I.",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://AIIshanova.github.io/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_192x192_fill_lanczos_center_2.png"
+      "url": "https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Проект № 5 \"Задача об эпидемии\""
+  "description": "Priject № 5 \"Epidemic\""
 }
 </script>
 
@@ -361,7 +361,7 @@
 
 
 
-  <title>Групповой проект &lt;Этап 1&gt; | Ishanova A.I.</title>
+  <title>Group project | Ishanova A.I.</title>
 </head>
 
 
@@ -774,7 +774,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Групповой проект &lt;Этап 1&gt;</h1>
+  <h1>Group project</h1>
 
   
 
@@ -828,223 +828,124 @@
 
     <div class="article-style">
       <p>Co-authors: Smorodova D., Shutenko V., Surtzov S. and Firtsov I.</p>
-<h2 id="модель">Модель</h2>
-<h3 id="модель-sir">Модель $SIR$</h3>
+<h2 id="description">Description</h2>
+<p>A small university project.</p>
+<h2 id="model">Model</h2>
+<h3 id="model-sir">Model SIR</h3>
+<p>Compartmental models simplify the mathematical modelling of infectious diseases. The population is assigned to compartments with labels – for example, S, I, or R, (Susceptible, Infectious, or Recovered). People may progress between compartments. The order of the labels usually shows the flow patterns between the compartments; for example SEIS means susceptible, exposed, infectious, then susceptible again.</p>
+<p>The origin of such models is the early 20th century, with important works being that of Ross in 1916, Ross and Hudson in 1917, Kermack and McKendrick in 1927 and Kendall in 1956.</p>
+<p>The models are most often run with ordinary differential equations (which are deterministic), but can also be used with a stochastic (random) framework, which is more realistic but much more complicated to analyze.</p>
+<p>Models try to predict things such as how a disease spreads, or the total number infected, or the duration of an epidemic, and to estimate various epidemiological parameters such as the reproductive number. Such models can show how different public health interventions may affect the outcome of the epidemic, e.g., what the most efficient technique is for issuing a limited number of vaccines in a given population.</p>
+<p>The SIR model is one of the simplest compartmental models, and many models are derivatives of this basic form. The model consists of three compartments:</p>
 <ul>
-<li>
-<p>Компартментная</p>
-</li>
-<li>
-<p>$S \rightarrow I \rightarrow R$, где $S$ - число  особей, восприимчивых к болезни</p>
-</li>
-<li>
-<p>Переменные  $S, I, R$  кол-во людей в каждой группе в определенное время/состояние системы, следовательно они функции от времени $S(t), I(t), R(t)$</p>
-</li>
-<li>
-<p>Система задается:</p>
-<ul>
-<li>$N -$ число особей в популяции</li>
-<li>$S(0) -$ число восприимчивых к болезни особей на момент начала эпидемии</li>
-<li>$I(0) -$ число инфицированных особей на момент начала эпидемии</li>
-<li>По умолчанию $R(0)=0$, $R(0) -$ число особей с иммунитетом к болезни на момент начала эпидемии</li>
-<li>$I^* -$  критическое значение заболевших</li>
+<li>S: The number of susceptible individuals. When a susceptible and an infectious individual come into &ldquo;infectious contact&rdquo;, the susceptible individual contracts the disease and transitions to the infectious compartment.</li>
+<li>I: The number of infectious individuals. These are individuals who have been infected and are capable of infecting susceptible individuals.</li>
+<li>R for the number of removed (and immune) or deceased individuals. These are individuals who have been infected and have either recovered from the disease and entered the removed compartment, or died. It is assumed that the number of deaths is negligible with respect to the total population. This compartment may also be called &ldquo;recovered&rdquo; or &ldquo;resistant&rdquo;.
+This model is reasonably predictive for infectious diseases that are transmitted from human to human, and where recovery confers lasting resistance, such as measles, mumps and rubella.</li>
 </ul>
-</li>
-</ul>
-<h2 id="описание-системы-уравнения">Описание системы (уравнения)</h2>
-<h3 id="система-1-скорость-изменения-числа-особей-восприимчивых-к-болезни">Система 1. Скорость изменения числа особей, восприимчивых к болезни</h3>
-<p>$$\frac{dS}{dt} = \begin{cases} -\alpha S, I(t) &gt; I^* \ 0, I(t) \leq I^*\end{cases} $$</p>
-<ul>
-<li>
-<p>$S -$ число  особей, восприимчивых к болезни</p>
-</li>
-<li>
-<p>$\alpha$ - коэффициент заболеваемости</p>
-</li>
-<li>
-<p>$I(t) -$ число инфицированных особей  в момент времени  $t$</p>
-</li>
-<li>
-<p>$I^* -$ критическое значение заболевших</p>
-</li>
-</ul>
-<h3 id="система-2-скорость-изменения-числа-инфекцированных-особей">Система 2. Скорость изменения числа инфекцированных особей</h3>
-<p>$$\frac{dI}{dt} = \begin{cases} \alpha S - \beta I, I(t) &gt; I^* \ - \beta I, I(t) \leq I^*\end{cases} $$</p>
-<ul>
-<li>
-<p>$S -$ число  особей, восприимчивых к болезни</p>
-</li>
-<li>
-<p>$\alpha$ - коэффициент заболеваемости</p>
-</li>
-<li>
-<p>$\beta$ - коэффициент выздоровления</p>
-</li>
-<li>
-<p>$I(t) -$ число инфицированных особей  в момент времени  $t$</p>
-</li>
-<li>
-<p>$I^* -$ критическое значение заболевших</p>
-</li>
-</ul>
-<h3 id="уравнение-скорости-изменения-выздоравливающих-особей">Уравнение скорости изменения выздоравливающих особей</h3>
-<p>$$\frac{dR}{dt} = \beta I $$</p>
-<ul>
-<li>
-<p>$\beta$ - коэффициент выздоровления</p>
-</li>
-<li>
-<p>$I -$ число инфицированных особей</p>
-</li>
-</ul>
-<h3 id="уравнение-при-условии-закрытия-границ-города">Уравнение при условии закрытия границ города</h3>
-<p>$$ I(t) + S(t) + R(t) = const = N $$</p>
-<ul>
-<li>
-<p>$I(t) -$ число инфицированных особей  в момент времени  $t$</p>
-</li>
-<li>
-<p>$S(t) -$ число восприимчивых к болезни особей в момент времени  $t$</p>
-</li>
-<li>
-<p>$S(t) -$ число особей с иммунитетом к болезни в момент времени  $t$</p>
-</li>
-<li>
-<p>$N -$ число жителей города</p>
-</li>
-</ul>
-<h2 id="исследование-модели">Исследование модели</h2>
-<p><img src="p2.jpeg" alt="Общий случай">{ #fig1: width=80% }</p>
-<h3 id="особые-случаи">Особые случаи</h3>
-<ul>
-<li>$I(t) &lt; I^*$, $R(t)\uparrow$ при $t\uparrow$ и $S(t)=const$ при $\forall t$</li>
-</ul>
-<p><img src="p1.jpeg" alt="случай $I(t) < I^*$">{ #fig1: width=80% }</p>
-<ul>
-<li>
-<p>Параметр $\alpha$ - коэффициент заболеваемости влияет на то, как быстро произойдет пик количества заболевших (чем больше $\alpha$, тем раньше пик, а чем раньше пик, тем он больше, так как меньше людей с иммунитетом)</p>
-</li>
-<li>
-<p>$\alpha=0$</p>
-<ul>
-<li>$S(t)=const=S(0)$ $\Rightarrow$ $\frac{dI}{dt}&lt;0$ при $\forall t$</li>
-<li>$-\frac{dI}{dt}=\frac{dR}{dt}$</li>
-<li>$|\frac{dI}{dt}|\downarrow$ при $t\uparrow$</li>
-</ul>
-</li>
-<li>
-<p>$\alpha=1$</p>
-<ul>
-<li>мгновенный пик количества заболевших</li>
-<li>$\lim_{t\to0^+}S(t)=0$</li>
-<li>$\lim_{t\to0^+}I(t)=N$</li>
-<li>и затем сразу же $-\frac{dI}{dt}=\frac{dR}{dt}$, $|\frac{dI}{dt}|\downarrow$ при $t\uparrow$</li>
-</ul>
-</li>
-<li>
-<p>Параметр $\beta$ - коэффициент выздоровления влияет на то, как быстро количество зараженных/больных стремиться к нулю</p>
-</li>
-<li>
-<p>$\beta=0$</p>
-<ul>
-<li>$R(t)=const=0$</li>
-<li>$I(t)\rightarrow N$, $S(t)\rightarrow 0$</li>
-<li>$I(\infty)=const=N$</li>
-</ul>
-</li>
-<li>
-<p>$\beta=1$</p>
-<ul>
-<li>мгновенное исцеление</li>
-<li>$\lim_{t\to0^+}I(t)=0$</li>
-<li>$\lim_{t\to0^+}R(t)=I(0)$</li>
-</ul>
-</li>
-</ul>
-<h3 id="анализ">Анализ</h3>
-<ol>
-<li>$\alpha&lt;\beta$
-<ul>
-<li>при $S \leq 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает</li>
-<li>при $S &gt; 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается</li>
-</ul>
-</li>
-<li>$\alpha&gt;\beta$
-<ul>
-<li>при $S \geq 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается</li>
-<li>при $S &lt; 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает</li>
-</ul>
-</li>
-<li>$\alpha=\beta$
-<ul>
-<li>при $S &gt; 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается</li>
-<li>при $S &lt; 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает</li>
-<li>при $S = 2I$ $\Rightarrow$ $\frac{dI}{dt}=\frac{dR}{dt}$ и $\frac{dR}{dt} \geq 0$ $\forall t$ $\Rightarrow$ $\frac{dI}{dt} \geq 0$ $\Rightarrow$ состояние невозможно поддерживать, так как $\frac{dS}{dt} \leq 0$ $\forall t$</li>
-</ul>
-</li>
-</ol>
-<h3 id="ассимтотические-исследования">Ассимтотические исследования</h3>
-<ul>
-<li>Так как в нашей модели отсутсвует повторная заболеваемость, то чем дольше длиться эпидемия
-<ul>
-<li>$R(t)\uparrow$ и $S(t)\downarrow$ $\Rightarrow$ $I(t)\downarrow$</li>
-<li>Причем, при длительной эпидемии пик количества заболевших пройден, а следовательно $\frac{dI}{dt}&lt;0$ и $|\frac{dI}{dt}|\downarrow$</li>
-<li>А если $I(t)\downarrow$ то $\frac{dR}{dt}\downarrow$</li>
-<li>Таким образом $I(\infty) \rightarrow 0$ и $R(\infty) \rightarrow N$ $\Rightarrow$ $S(\infty)\rightarrow 0$</li>
-</ul>
-</li>
-</ul>
-<h2 id="задача">Задача</h2>
-<h3 id="случай-а-начальное-число-зараженныхболеющих-меньше-критического">Случай а) начальное число зараженных/болеющих меньше критического</h3>
-<p>Известно, что из всех проживающих в городе $(N=10000)$ в момент начала эпидемии $(t=0)$ число заболевших испанкой людей (являющихся распространителями инфекции) $I(0)= 20$, А число здоровых людей с иммунитетом к болезни $R(0)=0$. Таким образом, число людей восприимчивых к болезни, но пока здоровых, в начальный момент времени $S(0) = N-I(0)= 9980$. Считаем, что после выявления болезни, город сразу же закрыли. При этом коэффициент заболеваемости $\alpha$ = 0.1, а коэффициент выздоровления $\beta$ = 0.05.</p>
-<h3 id="случай-б-начальное-число-зараженныхболеющих-больше-критического">Случай б) начальное число зараженных/болеющих больше критического</h3>
-<p>Известно, что из всех проживающих в городе $(N=10000)$ в момент начала эпидемии $(t=0)$ число заболевших испанкой людей (являющихся распространителями инфекции) $I(0)= 3000$, А число здоровых людей с иммунитетом к болезни $R(0)=0$. Таким образом, число людей восприимчивых к болезни, но пока здоровых, в начальный момент времени
-$S(0)=N-I(0)=7000$. Считаем, что после выявления болезни, город сразу же закрыли. При этом коэффициент заболеваемости $\alpha$ = 0.1, а коэффициент выздоровления $\beta$ = 0.05.</p>
-<h3 id="система-в-условиях-нашей-задачи">Система в условиях нашей задачи</h3>
-<p>$$\frac{dS}{dt} = \begin{cases} - 0.1 * S, I(t) &gt; I^* \ 0, I(t) \leq I^*\end{cases} $$</p>
-<ul>
-<li>
-<p>$S -$ число  особей, восприимчивых к болезни</p>
-</li>
-<li>
-<p>$I(t) -$ число инфицированных особей  в момент времени  $t$</p>
-</li>
-<li>
-<p>$I^* -$ критическое значение заболевших</p>
-</li>
-</ul>
-<p>$$\frac{dI}{dt} = \begin{cases} - 0.1 * S - 0.05 * I, I(t) &gt; I^* \ - 0.05 * I, I(t) \leq I^*\end{cases} $$</p>
-<ul>
-<li>
-<p>$S -$ число  особей, восприимчивых к болезни</p>
-</li>
-<li>
-<p>$I(t) -$ число инфицированных особей  в момент времени  $t$</p>
-</li>
-<li>
-<p>$I^* -$ критическое значение заболевших</p>
-</li>
-</ul>
-<p>$$\frac{dR}{dt} = 0.05 * I $$</p>
-<ul>
-<li>$I -$ число инфицированных особей</li>
-</ul>
-<p>$$ I(t) + S(t) + R(t) = const = N = 10000 $$</p>
-<ul>
-<li>
-<p>$I(t) -$ число инфицированных особей  в момент времени  $t$</p>
-</li>
-<li>
-<p>$S(t) -$ число восприимчивых к болезни особей в момент времени  $t$</p>
-</li>
-<li>
-<p>$S(t) -$ число особей с иммунитетом к болезни в момент времени  $t$</p>
-</li>
-<li>
-<p>$N -$ число жителей города</p>
-</li>
-</ul>
-<h2 id="библиография">Библиография</h2>
+<p>Spatial SIR model simulation. Each cell can infect its eight immediate neighbors.
+These variables (S, I, and R) represent the number of people in each compartment at a particular time. To represent that the number of susceptible, infectious and removed individuals may vary over time (even if the total population size remains constant), we make the precise numbers a function of t (time): S(t), I(t) and R(t). For a specific disease in a specific population, these functions may be worked out in order to predict possible outbreaks and bring them under control.</p>
+<p>As implied by the variable function of t, the model is dynamic in that the numbers in each compartment may fluctuate over time. The importance of this dynamic aspect is most obvious in an endemic disease with a short infectious period, such as measles in the UK prior to the introduction of a vaccine in 1968. Such diseases tend to occur in cycles of outbreaks due to the variation in number of susceptibles (S(t)) over time. During an epidemic, the number of susceptible individuals falls rapidly as more of them are infected and thus enter the infectious and removed compartments. The disease cannot break out again until the number of susceptibles has built back up, e.g. as a result of offspring being born into the susceptible compartment.</p>
+<p>Each member of the population typically progresses from susceptible to infectious to recovered. This can be shown as a flow diagram in which the boxes represent the different compartments and the arrows the transition between compartments, i.e.</p>
+<h2 id="octave-code">Octave code</h2>
+<h3 id="if-else">if-else</h3>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<p>function res = SIR(S0,I0,Ik,R0,a,b,tk)
+# getting parameters in ODE
+rate2 = @(t,state) rate(t,state,Ik,a,b);</p>
+<pre><code># solving ODE system
+[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+
+# extracting separate system parameters
+S = state(:,1);
+I = state(:,2);
+R = state(:,3);
+
+# drawing a graph
+hold on
+plot(T,S,'b')
+plot(T,I,'r')
+plot(T,R,'g')
+xlabel('Time')
+ylabel('Number of people')
+legend('S - Susceptible', 'I - Infectious', 'R - Recovered')
+title(&quot;SIR-model&quot;)
+</code></pre>
+<p>end</p>
+<p>`# ODE system
+function res = rate(t,state,Ik,a,b)
+#getting all initial stages
+s = state(1);
+i = state(2);
+r = state(3);</p>
+<pre><code># 
+if (i &gt; Ik)
+       dsdt = -a*s;
+       didt = a*s-b*i;
+       drdt = b*i;
+  else dsdt = 0;
+       didt = -b*i;
+       drdt = b*i;
+endif
+#
+# packing up everything
+res = [dsdt;didt;drdt];
+</code></pre>
+<p>end</p>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<h3 id="heaviside">heaviside</h3>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<p>function res = SIR(S0,I0,Ik,R0,a,b,tk)
+# getting parameters in ODE
+rate2 = @(t,state) rate(t,state,Ik,a,b);</p>
+<pre><code># solving ODE system
+[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+
+# extracting separate system parameters
+S = state(:,1);
+I = state(:,2);
+R = state(:,3);
+
+# drawing a graph
+hold on
+plot(T,S,'b')
+plot(T,I,'r')
+plot(T,R,'g')
+xlabel('Time')
+ylabel('Number of people')
+legend('S - Susceptible', 'I - Infectious', 'R - Recovered')
+title(&quot;SIR-model&quot;)
+</code></pre>
+<p>end</p>
+<p>`# ODE system
+function res = rate(t,state,Ik,a,b)
+#getting all initial stages
+s = state(1);
+i = state(2);
+r = state(3);</p>
+<pre><code># 
+dsdt = heaviside(i-Ik)*(-a*s);
+didt = heaviside(i-Ik)*(a*s)-b*i;
+drdt = b*i;
+#
+# packing up everything
+res = [dsdt;didt;drdt];
+</code></pre>
+<p>end</p>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<h2 id="sources">Sources</h2>
 <ol>
 <li>Compartmental models in epidemiology - <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology</a></li>
 <li><em>А.В. Гаврилина , С.В. Соколов</em> - Анализ SIR-модели распространения заболеваний, pp 229-232, 2018.</li>
@@ -1078,7 +979,7 @@ $S(0)=N-I(0)=7000$. Считаем, что после выявления бол�
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://AIIshanova.github.io/project/example/&amp;text=%d0%93%d1%80%d1%83%d0%bf%d0%bf%d0%be%d0%b2%d0%be%d0%b9%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%20&amp;lt;%d0%ad%d1%82%d0%b0%d0%bf%201&amp;gt;" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://AIIshanova.github.io/project/example/&amp;text=Group%20project" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1091,7 +992,7 @@ $S(0)=N-I(0)=7000$. Считаем, что после выявления бол�
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://AIIshanova.github.io/project/example/&amp;t=%d0%93%d1%80%d1%83%d0%bf%d0%bf%d0%be%d0%b2%d0%be%d0%b9%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%20&amp;lt;%d0%ad%d1%82%d0%b0%d0%bf%201&amp;gt;" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://AIIshanova.github.io/project/example/&amp;t=Group%20project" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1104,7 +1005,7 @@ $S(0)=N-I(0)=7000$. Считаем, что после выявления бол�
       
       
       <li>
-        <a href="mailto:?subject=%d0%93%d1%80%d1%83%d0%bf%d0%bf%d0%be%d0%b2%d0%be%d0%b9%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%20&amp;lt;%d0%ad%d1%82%d0%b0%d0%bf%201&amp;gt;&amp;body=https://AIIshanova.github.io/project/example/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Group%20project&amp;body=https://AIIshanova.github.io/project/example/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1117,7 +1018,7 @@ $S(0)=N-I(0)=7000$. Считаем, что после выявления бол�
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://AIIshanova.github.io/project/example/&amp;title=%d0%93%d1%80%d1%83%d0%bf%d0%bf%d0%be%d0%b2%d0%be%d0%b9%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%20&amp;lt;%d0%ad%d1%82%d0%b0%d0%bf%201&amp;gt;" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://AIIshanova.github.io/project/example/&amp;title=Group%20project" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1130,7 +1031,7 @@ $S(0)=N-I(0)=7000$. Считаем, что после выявления бол�
       
       
       <li>
-        <a href="whatsapp://send?text=%d0%93%d1%80%d1%83%d0%bf%d0%bf%d0%be%d0%b2%d0%be%d0%b9%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%20&amp;lt;%d0%ad%d1%82%d0%b0%d0%bf%201&amp;gt;%20https://AIIshanova.github.io/project/example/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Group%20project%20https://AIIshanova.github.io/project/example/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1143,7 +1044,7 @@ $S(0)=N-I(0)=7000$. Считаем, что после выявления бол�
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://AIIshanova.github.io/project/example/&amp;title=%d0%93%d1%80%d1%83%d0%bf%d0%bf%d0%be%d0%b2%d0%be%d0%b9%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%20&amp;lt;%d0%ad%d1%82%d0%b0%d0%bf%201&amp;gt;" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://AIIshanova.github.io/project/example/&amp;title=Group%20project" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

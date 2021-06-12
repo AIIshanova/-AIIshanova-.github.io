@@ -7,234 +7,135 @@
     <description>Projects</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://AIIshanova.github.io/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_512x512_fill_lanczos_center_2.png</url>
+      <url>https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
       <link>https://AIIshanova.github.io/project/</link>
     </image>
     
     <item>
-      <title>Групповой проект &lt;Этап 1&gt;</title>
+      <title>Group project</title>
       <link>https://AIIshanova.github.io/project/example/</link>
       <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
       <guid>https://AIIshanova.github.io/project/example/</guid>
       <description>&lt;p&gt;Co-authors: Smorodova D., Shutenko V., Surtzov S. and Firtsov I.&lt;/p&gt;
-&lt;h2 id=&#34;модель&#34;&gt;Модель&lt;/h2&gt;
-&lt;h3 id=&#34;модель-sir&#34;&gt;Модель $SIR$&lt;/h3&gt;
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+&lt;p&gt;A small university project.&lt;/p&gt;
+&lt;h2 id=&#34;model&#34;&gt;Model&lt;/h2&gt;
+&lt;h3 id=&#34;model-sir&#34;&gt;Model SIR&lt;/h3&gt;
+&lt;p&gt;Compartmental models simplify the mathematical modelling of infectious diseases. The population is assigned to compartments with labels – for example, S, I, or R, (Susceptible, Infectious, or Recovered). People may progress between compartments. The order of the labels usually shows the flow patterns between the compartments; for example SEIS means susceptible, exposed, infectious, then susceptible again.&lt;/p&gt;
+&lt;p&gt;The origin of such models is the early 20th century, with important works being that of Ross in 1916, Ross and Hudson in 1917, Kermack and McKendrick in 1927 and Kendall in 1956.&lt;/p&gt;
+&lt;p&gt;The models are most often run with ordinary differential equations (which are deterministic), but can also be used with a stochastic (random) framework, which is more realistic but much more complicated to analyze.&lt;/p&gt;
+&lt;p&gt;Models try to predict things such as how a disease spreads, or the total number infected, or the duration of an epidemic, and to estimate various epidemiological parameters such as the reproductive number. Such models can show how different public health interventions may affect the outcome of the epidemic, e.g., what the most efficient technique is for issuing a limited number of vaccines in a given population.&lt;/p&gt;
+&lt;p&gt;The SIR model is one of the simplest compartmental models, and many models are derivatives of this basic form. The model consists of three compartments:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Компартментная&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$S \rightarrow I \rightarrow R$, где $S$ - число  особей, восприимчивых к болезни&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Переменные  $S, I, R$  кол-во людей в каждой группе в определенное время/состояние системы, следовательно они функции от времени $S(t), I(t), R(t)$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Система задается:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$N -$ число особей в популяции&lt;/li&gt;
-&lt;li&gt;$S(0) -$ число восприимчивых к болезни особей на момент начала эпидемии&lt;/li&gt;
-&lt;li&gt;$I(0) -$ число инфицированных особей на момент начала эпидемии&lt;/li&gt;
-&lt;li&gt;По умолчанию $R(0)=0$, $R(0) -$ число особей с иммунитетом к болезни на момент начала эпидемии&lt;/li&gt;
-&lt;li&gt;$I^* -$  критическое значение заболевших&lt;/li&gt;
+&lt;li&gt;S: The number of susceptible individuals. When a susceptible and an infectious individual come into &amp;ldquo;infectious contact&amp;rdquo;, the susceptible individual contracts the disease and transitions to the infectious compartment.&lt;/li&gt;
+&lt;li&gt;I: The number of infectious individuals. These are individuals who have been infected and are capable of infecting susceptible individuals.&lt;/li&gt;
+&lt;li&gt;R for the number of removed (and immune) or deceased individuals. These are individuals who have been infected and have either recovered from the disease and entered the removed compartment, or died. It is assumed that the number of deaths is negligible with respect to the total population. This compartment may also be called &amp;ldquo;recovered&amp;rdquo; or &amp;ldquo;resistant&amp;rdquo;.
+This model is reasonably predictive for infectious diseases that are transmitted from human to human, and where recovery confers lasting resistance, such as measles, mumps and rubella.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;описание-системы-уравнения&#34;&gt;Описание системы (уравнения)&lt;/h2&gt;
-&lt;h3 id=&#34;система-1-скорость-изменения-числа-особей-восприимчивых-к-болезни&#34;&gt;Система 1. Скорость изменения числа особей, восприимчивых к болезни&lt;/h3&gt;
-&lt;p&gt;$$\frac{dS}{dt} = \begin{cases} -\alpha S, I(t) &amp;gt; I^* \ 0, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\alpha$ - коэффициент заболеваемости&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;система-2-скорость-изменения-числа-инфекцированных-особей&#34;&gt;Система 2. Скорость изменения числа инфекцированных особей&lt;/h3&gt;
-&lt;p&gt;$$\frac{dI}{dt} = \begin{cases} \alpha S - \beta I, I(t) &amp;gt; I^* \ - \beta I, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\alpha$ - коэффициент заболеваемости&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\beta$ - коэффициент выздоровления&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;уравнение-скорости-изменения-выздоравливающих-особей&#34;&gt;Уравнение скорости изменения выздоравливающих особей&lt;/h3&gt;
-&lt;p&gt;$$\frac{dR}{dt} = \beta I $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$\beta$ - коэффициент выздоровления&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I -$ число инфицированных особей&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;уравнение-при-условии-закрытия-границ-города&#34;&gt;Уравнение при условии закрытия границ города&lt;/h3&gt;
-&lt;p&gt;$$ I(t) + S(t) + R(t) = const = N $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$S(t) -$ число восприимчивых к болезни особей в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$S(t) -$ число особей с иммунитетом к болезни в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$N -$ число жителей города&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;исследование-модели&#34;&gt;Исследование модели&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;p2.jpeg&#34; alt=&#34;Общий случай&#34;&gt;{ #fig1: width=80% }&lt;/p&gt;
-&lt;h3 id=&#34;особые-случаи&#34;&gt;Особые случаи&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;$I(t) &amp;lt; I^*$, $R(t)\uparrow$ при $t\uparrow$ и $S(t)=const$ при $\forall t$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;p1.jpeg&#34; alt=&#34;случай $I(t) &lt; I^*$&#34;&gt;{ #fig1: width=80% }&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Параметр $\alpha$ - коэффициент заболеваемости влияет на то, как быстро произойдет пик количества заболевших (чем больше $\alpha$, тем раньше пик, а чем раньше пик, тем он больше, так как меньше людей с иммунитетом)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\alpha=0$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$S(t)=const=S(0)$ $\Rightarrow$ $\frac{dI}{dt}&amp;lt;0$ при $\forall t$&lt;/li&gt;
-&lt;li&gt;$-\frac{dI}{dt}=\frac{dR}{dt}$&lt;/li&gt;
-&lt;li&gt;$|\frac{dI}{dt}|\downarrow$ при $t\uparrow$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\alpha=1$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;мгновенный пик количества заболевших&lt;/li&gt;
-&lt;li&gt;$\lim_{t\to0^+}S(t)=0$&lt;/li&gt;
-&lt;li&gt;$\lim_{t\to0^+}I(t)=N$&lt;/li&gt;
-&lt;li&gt;и затем сразу же $-\frac{dI}{dt}=\frac{dR}{dt}$, $|\frac{dI}{dt}|\downarrow$ при $t\uparrow$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Параметр $\beta$ - коэффициент выздоровления влияет на то, как быстро количество зараженных/больных стремиться к нулю&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\beta=0$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$R(t)=const=0$&lt;/li&gt;
-&lt;li&gt;$I(t)\rightarrow N$, $S(t)\rightarrow 0$&lt;/li&gt;
-&lt;li&gt;$I(\infty)=const=N$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\beta=1$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;мгновенное исцеление&lt;/li&gt;
-&lt;li&gt;$\lim_{t\to0^+}I(t)=0$&lt;/li&gt;
-&lt;li&gt;$\lim_{t\to0^+}R(t)=I(0)$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;анализ&#34;&gt;Анализ&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;$\alpha&amp;lt;\beta$
-&lt;ul&gt;
-&lt;li&gt;при $S \leq 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает&lt;/li&gt;
-&lt;li&gt;при $S &amp;gt; 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;$\alpha&amp;gt;\beta$
-&lt;ul&gt;
-&lt;li&gt;при $S \geq 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается&lt;/li&gt;
-&lt;li&gt;при $S &amp;lt; 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;$\alpha=\beta$
-&lt;ul&gt;
-&lt;li&gt;при $S &amp;gt; 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается&lt;/li&gt;
-&lt;li&gt;при $S &amp;lt; 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает&lt;/li&gt;
-&lt;li&gt;при $S = 2I$ $\Rightarrow$ $\frac{dI}{dt}=\frac{dR}{dt}$ и $\frac{dR}{dt} \geq 0$ $\forall t$ $\Rightarrow$ $\frac{dI}{dt} \geq 0$ $\Rightarrow$ состояние невозможно поддерживать, так как $\frac{dS}{dt} \leq 0$ $\forall t$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;ассимтотические-исследования&#34;&gt;Ассимтотические исследования&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Так как в нашей модели отсутсвует повторная заболеваемость, то чем дольше длиться эпидемия
-&lt;ul&gt;
-&lt;li&gt;$R(t)\uparrow$ и $S(t)\downarrow$ $\Rightarrow$ $I(t)\downarrow$&lt;/li&gt;
-&lt;li&gt;Причем, при длительной эпидемии пик количества заболевших пройден, а следовательно $\frac{dI}{dt}&amp;lt;0$ и $|\frac{dI}{dt}|\downarrow$&lt;/li&gt;
-&lt;li&gt;А если $I(t)\downarrow$ то $\frac{dR}{dt}\downarrow$&lt;/li&gt;
-&lt;li&gt;Таким образом $I(\infty) \rightarrow 0$ и $R(\infty) \rightarrow N$ $\Rightarrow$ $S(\infty)\rightarrow 0$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;задача&#34;&gt;Задача&lt;/h2&gt;
-&lt;h3 id=&#34;случай-а-начальное-число-зараженныхболеющих-меньше-критического&#34;&gt;Случай а) начальное число зараженных/болеющих меньше критического&lt;/h3&gt;
-&lt;p&gt;Известно, что из всех проживающих в городе $(N=10000)$ в момент начала эпидемии $(t=0)$ число заболевших испанкой людей (являющихся распространителями инфекции) $I(0)= 20$, А число здоровых людей с иммунитетом к болезни $R(0)=0$. Таким образом, число людей восприимчивых к болезни, но пока здоровых, в начальный момент времени $S(0) = N-I(0)= 9980$. Считаем, что после выявления болезни, город сразу же закрыли. При этом коэффициент заболеваемости $\alpha$ = 0.1, а коэффициент выздоровления $\beta$ = 0.05.&lt;/p&gt;
-&lt;h3 id=&#34;случай-б-начальное-число-зараженныхболеющих-больше-критического&#34;&gt;Случай б) начальное число зараженных/болеющих больше критического&lt;/h3&gt;
-&lt;p&gt;Известно, что из всех проживающих в городе $(N=10000)$ в момент начала эпидемии $(t=0)$ число заболевших испанкой людей (являющихся распространителями инфекции) $I(0)= 3000$, А число здоровых людей с иммунитетом к болезни $R(0)=0$. Таким образом, число людей восприимчивых к болезни, но пока здоровых, в начальный момент времени
-$S(0)=N-I(0)=7000$. Считаем, что после выявления болезни, город сразу же закрыли. При этом коэффициент заболеваемости $\alpha$ = 0.1, а коэффициент выздоровления $\beta$ = 0.05.&lt;/p&gt;
-&lt;h3 id=&#34;система-в-условиях-нашей-задачи&#34;&gt;Система в условиях нашей задачи&lt;/h3&gt;
-&lt;p&gt;$$\frac{dS}{dt} = \begin{cases} - 0.1 * S, I(t) &amp;gt; I^* \ 0, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;$$\frac{dI}{dt} = \begin{cases} - 0.1 * S - 0.05 * I, I(t) &amp;gt; I^* \ - 0.05 * I, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;$$\frac{dR}{dt} = 0.05 * I $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$I -$ число инфицированных особей&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;$$ I(t) + S(t) + R(t) = const = N = 10000 $$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$S(t) -$ число восприимчивых к болезни особей в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$S(t) -$ число особей с иммунитетом к болезни в момент времени  $t$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$N -$ число жителей города&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;библиография&#34;&gt;Библиография&lt;/h2&gt;
+&lt;p&gt;Spatial SIR model simulation. Each cell can infect its eight immediate neighbors.
+These variables (S, I, and R) represent the number of people in each compartment at a particular time. To represent that the number of susceptible, infectious and removed individuals may vary over time (even if the total population size remains constant), we make the precise numbers a function of t (time): S(t), I(t) and R(t). For a specific disease in a specific population, these functions may be worked out in order to predict possible outbreaks and bring them under control.&lt;/p&gt;
+&lt;p&gt;As implied by the variable function of t, the model is dynamic in that the numbers in each compartment may fluctuate over time. The importance of this dynamic aspect is most obvious in an endemic disease with a short infectious period, such as measles in the UK prior to the introduction of a vaccine in 1968. Such diseases tend to occur in cycles of outbreaks due to the variation in number of susceptibles (S(t)) over time. During an epidemic, the number of susceptible individuals falls rapidly as more of them are infected and thus enter the infectious and removed compartments. The disease cannot break out again until the number of susceptibles has built back up, e.g. as a result of offspring being born into the susceptible compartment.&lt;/p&gt;
+&lt;p&gt;Each member of the population typically progresses from susceptible to infectious to recovered. This can be shown as a flow diagram in which the boxes represent the different compartments and the arrows the transition between compartments, i.e.&lt;/p&gt;
+&lt;h2 id=&#34;octave-code&#34;&gt;Octave code&lt;/h2&gt;
+&lt;h3 id=&#34;if-else&#34;&gt;if-else&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+# getting parameters in ODE
+rate2 = @(t,state) rate(t,state,Ik,a,b);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# solving ODE system
+[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+
+# extracting separate system parameters
+S = state(:,1);
+I = state(:,2);
+R = state(:,3);
+
+# drawing a graph
+hold on
+plot(T,S,&#39;b&#39;)
+plot(T,I,&#39;r&#39;)
+plot(T,R,&#39;g&#39;)
+xlabel(&#39;Time&#39;)
+ylabel(&#39;Number of people&#39;)
+legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+title(&amp;quot;SIR-model&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;end&lt;/p&gt;
+&lt;p&gt;`# ODE system
+function res = rate(t,state,Ik,a,b)
+#getting all initial stages
+s = state(1);
+i = state(2);
+r = state(3);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 
+if (i &amp;gt; Ik)
+       dsdt = -a*s;
+       didt = a*s-b*i;
+       drdt = b*i;
+  else dsdt = 0;
+       didt = -b*i;
+       drdt = b*i;
+endif
+#
+# packing up everything
+res = [dsdt;didt;drdt];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;end&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;heaviside&#34;&gt;heaviside&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+# getting parameters in ODE
+rate2 = @(t,state) rate(t,state,Ik,a,b);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# solving ODE system
+[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+
+# extracting separate system parameters
+S = state(:,1);
+I = state(:,2);
+R = state(:,3);
+
+# drawing a graph
+hold on
+plot(T,S,&#39;b&#39;)
+plot(T,I,&#39;r&#39;)
+plot(T,R,&#39;g&#39;)
+xlabel(&#39;Time&#39;)
+ylabel(&#39;Number of people&#39;)
+legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+title(&amp;quot;SIR-model&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;end&lt;/p&gt;
+&lt;p&gt;`# ODE system
+function res = rate(t,state,Ik,a,b)
+#getting all initial stages
+s = state(1);
+i = state(2);
+r = state(3);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 
+dsdt = heaviside(i-Ik)*(-a*s);
+didt = heaviside(i-Ik)*(a*s)-b*i;
+drdt = b*i;
+#
+# packing up everything
+res = [dsdt;didt;drdt];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;end&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Compartmental models in epidemiology - &lt;a href=&#34;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&#34;&gt;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;А.В. Гаврилина , С.В. Соколов&lt;/em&gt; - Анализ SIR-модели распространения заболеваний, pp 229-232, 2018.&lt;/li&gt;
@@ -243,77 +144,13 @@ $S(0)=N-I(0)=7000$. Считаем, что после выявления бол�
     </item>
     
     <item>
-      <title>Индивидуальный проект &lt;Этап 1&gt;</title>
+      <title>Induvidual project</title>
       <link>https://AIIshanova.github.io/project/personal-project/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
       <guid>https://AIIshanova.github.io/project/personal-project/</guid>
-      <description>&lt;h2 id=&#34;задание&#34;&gt;Задание&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Размещение на Github заготовки для персонального сайта&lt;/li&gt;
-&lt;li&gt;Установка фотографии владельца сайта&lt;/li&gt;
-&lt;li&gt;Установка описания владельца сайта&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;выполнение&#34;&gt;Выполнение&lt;/h2&gt;
-&lt;h3 id=&#34;размещение-сайта-на-github&#34;&gt;Размещение сайта на github&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Организация рабочего пространства (команда mkdir). (рис.2.1 и рис.2.2)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/1.png&#34; alt=&#34;создание каталогов&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pics/2.png&#34; alt=&#34;создание каталогов(продолжение)&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Создаем директорию blog (mkdir), переходим в нее (cd) и скачиваем туда шаблон нашего будущего сайта (git clone). (рис.2.3)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/3.png&#34; alt=&#34;скачивание шаблона&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Запускаем hugo (hugo). (рис.2.4)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/4.png&#34; alt=&#34;скачивание шаблона&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Удаляем ненужные файлы (rm). (рис.2.5)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/5.png&#34; alt=&#34;удаление файлов из шаблона&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Инициализируем git (git init), коммитим (git add . и git commit). (рис.2.6)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/6.png&#34; alt=&#34;работа с git&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;Создаем репизитории н для сайта на github. (рис.2.7)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/7.png&#34; alt=&#34;список репозиторий на github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;Выкладываем репозиторий на github (remote add origin, push). (рис.2.8)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/8.png&#34; alt=&#34;выкладывание репозитория на Github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;8&#34;&gt;
-&lt;li&gt;Создание подмодуля (git submodule add). (рис.2.9)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/a.png&#34; alt=&#34;создание подмодуля&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;Добавляем все в локальный репозиторий git и отправляем его в удаленный репозиторий на GitHub. (рис.2.10)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/b.png&#34; alt=&#34;выкладка данных в удаленный репозиторий&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;10&#34;&gt;
-&lt;li&gt;Обновляем HTML через hugo (hugo, git add, git commit). (рис.2.11)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/9.png&#34; alt=&#34;выкладывание репозитория на Github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;11&#34;&gt;
-&lt;li&gt;Выкладываем все на github(git push). (рис.2.11)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/10.png&#34; alt=&#34;выкладывание репозитория на Github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;h3 id=&#34;смена-аватара-владельца&#34;&gt;Смена аватара владельца&lt;/h3&gt;
-&lt;p&gt;Заменяем картирнку avatar.jpg на нашу с таким же наименованием в папке &amp;hellip;/blog/git/content/authors.&lt;/p&gt;
-&lt;h3 id=&#34;изменение-информации-о-пользователе&#34;&gt;Изменение информации о пользователе&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;В папке &amp;hellip;/blog/git/content/authors открываем файл _index.md и редактируем его.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/14.png&#34; alt=&#34;редактирование _index.md&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Обновляем наш сайт через hugo и github (hugo, git add, git commit).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;pics/15.png&#34; alt=&#34;запускаем hugo&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pics/16.png&#34; alt=&#34;обновляем данные&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
-&lt;h2 id=&#34;результат&#34;&gt;Результат&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;pics/18.png&#34; alt=&#34;мой сайт-визитка&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+      <description>&lt;p&gt;A small university project.&lt;/p&gt;
+&lt;p&gt;Creating a site which could be used as a bussiness card from a template.&lt;/p&gt;
+&lt;p&gt;You are using it right now. :)&lt;/p&gt;
 </description>
     </item>
     
