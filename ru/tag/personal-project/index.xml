@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal project | Ишанова А.И.</title>
+    <link>https://AIIshanova.github.io/ru/tag/personal-project/</link>
+      <atom:link href="https://AIIshanova.github.io/ru/tag/personal-project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Personal project</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>ru</language><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://AIIshanova.github.io/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_512x512_fill_lanczos_center_2.png</url>
+      <title>Personal project</title>
+      <link>https://AIIshanova.github.io/ru/tag/personal-project/</link>
+    </image>
+    
+    <item>
+      <title>Индивидуальный проект &lt;Этап 1&gt;</title>
+      <link>https://AIIshanova.github.io/ru/project/personal-project/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://AIIshanova.github.io/ru/project/personal-project/</guid>
+      <description>&lt;h2 id=&#34;задание&#34;&gt;Задание&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Размещение на Github заготовки для персонального сайта&lt;/li&gt;
+&lt;li&gt;Установка фотографии владельца сайта&lt;/li&gt;
+&lt;li&gt;Установка описания владельца сайта&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;выполнение&#34;&gt;Выполнение&lt;/h2&gt;
+&lt;h3 id=&#34;размещение-сайта-на-github&#34;&gt;Размещение сайта на github&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Организация рабочего пространства (команда mkdir). (рис.2.1 и рис.2.2)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/1.png&#34; alt=&#34;создание каталогов&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pics/2.png&#34; alt=&#34;создание каталогов(продолжение)&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Создаем директорию blog (mkdir), переходим в нее (cd) и скачиваем туда шаблон нашего будущего сайта (git clone). (рис.2.3)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/3.png&#34; alt=&#34;скачивание шаблона&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Запускаем hugo (hugo). (рис.2.4)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/4.png&#34; alt=&#34;скачивание шаблона&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Удаляем ненужные файлы (rm). (рис.2.5)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/5.png&#34; alt=&#34;удаление файлов из шаблона&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Инициализируем git (git init), коммитим (git add . и git commit). (рис.2.6)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/6.png&#34; alt=&#34;работа с git&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Создаем репизитории н для сайта на github. (рис.2.7)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/7.png&#34; alt=&#34;список репозиторий на github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Выкладываем репозиторий на github (remote add origin, push). (рис.2.8)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/8.png&#34; alt=&#34;выкладывание репозитория на Github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Создание подмодуля (git submodule add). (рис.2.9)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/a.png&#34; alt=&#34;создание подмодуля&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Добавляем все в локальный репозиторий git и отправляем его в удаленный репозиторий на GitHub. (рис.2.10)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/b.png&#34; alt=&#34;выкладка данных в удаленный репозиторий&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;Обновляем HTML через hugo (hugo, git add, git commit). (рис.2.11)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/9.png&#34; alt=&#34;выкладывание репозитория на Github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;Выкладываем все на github(git push). (рис.2.11)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/10.png&#34; alt=&#34;выкладывание репозитория на Github&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;h3 id=&#34;смена-аватара-владельца&#34;&gt;Смена аватара владельца&lt;/h3&gt;
+&lt;p&gt;Заменяем картирнку avatar.jpg на нашу с таким же наименованием в папке &amp;hellip;/blog/git/content/authors.&lt;/p&gt;
+&lt;h3 id=&#34;изменение-информации-о-пользователе&#34;&gt;Изменение информации о пользователе&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;В папке &amp;hellip;/blog/git/content/authors открываем файл _index.md и редактируем его.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/14.png&#34; alt=&#34;редактирование _index.md&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Обновляем наш сайт через hugo и github (hugo, git add, git commit).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;pics/15.png&#34; alt=&#34;запускаем hugo&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pics/16.png&#34; alt=&#34;обновляем данные&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+&lt;h2 id=&#34;результат&#34;&gt;Результат&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;pics/18.png&#34; alt=&#34;мой сайт-визитка&#34;&gt;{ #fig1:1 width=100% }&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

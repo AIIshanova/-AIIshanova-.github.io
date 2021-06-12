@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Group project | Ишанова А.И.</title>
+    <link>https://AIIshanova.github.io/ru/tag/group-project/</link>
+      <atom:link href="https://AIIshanova.github.io/ru/tag/group-project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Group project</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>ru</language><lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://AIIshanova.github.io/media/icon_hu3dc25f0c00fa93a37738e19fb58585cc_84426_512x512_fill_lanczos_center_2.png</url>
+      <title>Group project</title>
+      <link>https://AIIshanova.github.io/ru/tag/group-project/</link>
+    </image>
+    
+    <item>
+      <title>Групповой проект &lt;Этап 1&gt;</title>
+      <link>https://AIIshanova.github.io/ru/project/example/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://AIIshanova.github.io/ru/project/example/</guid>
+      <description>&lt;p&gt;Co-authors: Smorodova D., Shutenko V., Surtzov S. and Firtsov I.&lt;/p&gt;
+&lt;h2 id=&#34;модель&#34;&gt;Модель&lt;/h2&gt;
+&lt;h3 id=&#34;модель-sir&#34;&gt;Модель $SIR$&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Компартментная&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S \rightarrow I \rightarrow R$, где $S$ - число  особей, восприимчивых к болезни&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Переменные  $S, I, R$  кол-во людей в каждой группе в определенное время/состояние системы, следовательно они функции от времени $S(t), I(t), R(t)$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Система задается:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$N -$ число особей в популяции&lt;/li&gt;
+&lt;li&gt;$S(0) -$ число восприимчивых к болезни особей на момент начала эпидемии&lt;/li&gt;
+&lt;li&gt;$I(0) -$ число инфицированных особей на момент начала эпидемии&lt;/li&gt;
+&lt;li&gt;По умолчанию $R(0)=0$, $R(0) -$ число особей с иммунитетом к болезни на момент начала эпидемии&lt;/li&gt;
+&lt;li&gt;$I^* -$  критическое значение заболевших&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;описание-системы-уравнения&#34;&gt;Описание системы (уравнения)&lt;/h2&gt;
+&lt;h3 id=&#34;система-1-скорость-изменения-числа-особей-восприимчивых-к-болезни&#34;&gt;Система 1. Скорость изменения числа особей, восприимчивых к болезни&lt;/h3&gt;
+&lt;p&gt;$$\frac{dS}{dt} = \begin{cases} -\alpha S, I(t) &amp;gt; I^* \ 0, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\alpha$ - коэффициент заболеваемости&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;система-2-скорость-изменения-числа-инфекцированных-особей&#34;&gt;Система 2. Скорость изменения числа инфекцированных особей&lt;/h3&gt;
+&lt;p&gt;$$\frac{dI}{dt} = \begin{cases} \alpha S - \beta I, I(t) &amp;gt; I^* \ - \beta I, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\alpha$ - коэффициент заболеваемости&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\beta$ - коэффициент выздоровления&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;уравнение-скорости-изменения-выздоравливающих-особей&#34;&gt;Уравнение скорости изменения выздоравливающих особей&lt;/h3&gt;
+&lt;p&gt;$$\frac{dR}{dt} = \beta I $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$\beta$ - коэффициент выздоровления&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I -$ число инфицированных особей&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;уравнение-при-условии-закрытия-границ-города&#34;&gt;Уравнение при условии закрытия границ города&lt;/h3&gt;
+&lt;p&gt;$$ I(t) + S(t) + R(t) = const = N $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S(t) -$ число восприимчивых к болезни особей в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S(t) -$ число особей с иммунитетом к болезни в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$N -$ число жителей города&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;исследование-модели&#34;&gt;Исследование модели&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;p2.jpeg&#34; alt=&#34;Общий случай&#34;&gt;{ #fig1: width=80% }&lt;/p&gt;
+&lt;h3 id=&#34;особые-случаи&#34;&gt;Особые случаи&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;$I(t) &amp;lt; I^*$, $R(t)\uparrow$ при $t\uparrow$ и $S(t)=const$ при $\forall t$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;p1.jpeg&#34; alt=&#34;случай $I(t) &lt; I^*$&#34;&gt;{ #fig1: width=80% }&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Параметр $\alpha$ - коэффициент заболеваемости влияет на то, как быстро произойдет пик количества заболевших (чем больше $\alpha$, тем раньше пик, а чем раньше пик, тем он больше, так как меньше людей с иммунитетом)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\alpha=0$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S(t)=const=S(0)$ $\Rightarrow$ $\frac{dI}{dt}&amp;lt;0$ при $\forall t$&lt;/li&gt;
+&lt;li&gt;$-\frac{dI}{dt}=\frac{dR}{dt}$&lt;/li&gt;
+&lt;li&gt;$|\frac{dI}{dt}|\downarrow$ при $t\uparrow$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\alpha=1$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;мгновенный пик количества заболевших&lt;/li&gt;
+&lt;li&gt;$\lim_{t\to0^+}S(t)=0$&lt;/li&gt;
+&lt;li&gt;$\lim_{t\to0^+}I(t)=N$&lt;/li&gt;
+&lt;li&gt;и затем сразу же $-\frac{dI}{dt}=\frac{dR}{dt}$, $|\frac{dI}{dt}|\downarrow$ при $t\uparrow$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Параметр $\beta$ - коэффициент выздоровления влияет на то, как быстро количество зараженных/больных стремиться к нулю&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\beta=0$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$R(t)=const=0$&lt;/li&gt;
+&lt;li&gt;$I(t)\rightarrow N$, $S(t)\rightarrow 0$&lt;/li&gt;
+&lt;li&gt;$I(\infty)=const=N$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\beta=1$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;мгновенное исцеление&lt;/li&gt;
+&lt;li&gt;$\lim_{t\to0^+}I(t)=0$&lt;/li&gt;
+&lt;li&gt;$\lim_{t\to0^+}R(t)=I(0)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;анализ&#34;&gt;Анализ&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;$\alpha&amp;lt;\beta$
+&lt;ul&gt;
+&lt;li&gt;при $S \leq 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает&lt;/li&gt;
+&lt;li&gt;при $S &amp;gt; 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$\alpha&amp;gt;\beta$
+&lt;ul&gt;
+&lt;li&gt;при $S \geq 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается&lt;/li&gt;
+&lt;li&gt;при $S &amp;lt; 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$\alpha=\beta$
+&lt;ul&gt;
+&lt;li&gt;при $S &amp;gt; 2I$ заражаются быстрее чем выздоравливают $\Rightarrow$ эпидемия разгорается&lt;/li&gt;
+&lt;li&gt;при $S &amp;lt; 2I$ выздоравливают быстрее чем заражаются $\Rightarrow$ эпидемия затухает&lt;/li&gt;
+&lt;li&gt;при $S = 2I$ $\Rightarrow$ $\frac{dI}{dt}=\frac{dR}{dt}$ и $\frac{dR}{dt} \geq 0$ $\forall t$ $\Rightarrow$ $\frac{dI}{dt} \geq 0$ $\Rightarrow$ состояние невозможно поддерживать, так как $\frac{dS}{dt} \leq 0$ $\forall t$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;ассимтотические-исследования&#34;&gt;Ассимтотические исследования&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Так как в нашей модели отсутсвует повторная заболеваемость, то чем дольше длиться эпидемия
+&lt;ul&gt;
+&lt;li&gt;$R(t)\uparrow$ и $S(t)\downarrow$ $\Rightarrow$ $I(t)\downarrow$&lt;/li&gt;
+&lt;li&gt;Причем, при длительной эпидемии пик количества заболевших пройден, а следовательно $\frac{dI}{dt}&amp;lt;0$ и $|\frac{dI}{dt}|\downarrow$&lt;/li&gt;
+&lt;li&gt;А если $I(t)\downarrow$ то $\frac{dR}{dt}\downarrow$&lt;/li&gt;
+&lt;li&gt;Таким образом $I(\infty) \rightarrow 0$ и $R(\infty) \rightarrow N$ $\Rightarrow$ $S(\infty)\rightarrow 0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;задача&#34;&gt;Задача&lt;/h2&gt;
+&lt;h3 id=&#34;случай-а-начальное-число-зараженныхболеющих-меньше-критического&#34;&gt;Случай а) начальное число зараженных/болеющих меньше критического&lt;/h3&gt;
+&lt;p&gt;Известно, что из всех проживающих в городе $(N=10000)$ в момент начала эпидемии $(t=0)$ число заболевших испанкой людей (являющихся распространителями инфекции) $I(0)= 20$, А число здоровых людей с иммунитетом к болезни $R(0)=0$. Таким образом, число людей восприимчивых к болезни, но пока здоровых, в начальный момент времени $S(0) = N-I(0)= 9980$. Считаем, что после выявления болезни, город сразу же закрыли. При этом коэффициент заболеваемости $\alpha$ = 0.1, а коэффициент выздоровления $\beta$ = 0.05.&lt;/p&gt;
+&lt;h3 id=&#34;случай-б-начальное-число-зараженныхболеющих-больше-критического&#34;&gt;Случай б) начальное число зараженных/болеющих больше критического&lt;/h3&gt;
+&lt;p&gt;Известно, что из всех проживающих в городе $(N=10000)$ в момент начала эпидемии $(t=0)$ число заболевших испанкой людей (являющихся распространителями инфекции) $I(0)= 3000$, А число здоровых людей с иммунитетом к болезни $R(0)=0$. Таким образом, число людей восприимчивых к болезни, но пока здоровых, в начальный момент времени
+$S(0)=N-I(0)=7000$. Считаем, что после выявления болезни, город сразу же закрыли. При этом коэффициент заболеваемости $\alpha$ = 0.1, а коэффициент выздоровления $\beta$ = 0.05.&lt;/p&gt;
+&lt;h3 id=&#34;система-в-условиях-нашей-задачи&#34;&gt;Система в условиях нашей задачи&lt;/h3&gt;
+&lt;p&gt;$$\frac{dS}{dt} = \begin{cases} - 0.1 * S, I(t) &amp;gt; I^* \ 0, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$\frac{dI}{dt} = \begin{cases} - 0.1 * S - 0.05 * I, I(t) &amp;gt; I^* \ - 0.05 * I, I(t) \leq I^*\end{cases} $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$S -$ число  особей, восприимчивых к болезни&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$I^* -$ критическое значение заболевших&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$\frac{dR}{dt} = 0.05 * I $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$I -$ число инфицированных особей&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$ I(t) + S(t) + R(t) = const = N = 10000 $$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$I(t) -$ число инфицированных особей  в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S(t) -$ число восприимчивых к болезни особей в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S(t) -$ число особей с иммунитетом к болезни в момент времени  $t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$N -$ число жителей города&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;библиография&#34;&gt;Библиография&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Compartmental models in epidemiology - &lt;a href=&#34;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&#34;&gt;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;А.В. Гаврилина , С.В. Соколов&lt;/em&gt; - Анализ SIR-модели распространения заболеваний, pp 229-232, 2018.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
