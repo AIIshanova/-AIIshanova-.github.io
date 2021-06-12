@@ -2,45 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://AIIshanova.github.io/ru/talk/example-talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://AIIshanova.github.io/talk/example-talk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://AIIshanova.github.io/ru/talk/example-talk/"
-                />
-  </url><url>
-    <loc>https://AIIshanova.github.io/ru/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://AIIshanova.github.io/event/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://AIIshanova.github.io/ru/event/"
-                />
-  </url><url>
-    <loc>https://AIIshanova.github.io/ru/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://AIIshanova.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://AIIshanova.github.io/ru/"
-                />
-  </url><url>
     <loc>https://AIIshanova.github.io/ru/categories/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -104,6 +65,19 @@
                 rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/tags/"
+                />
+  </url><url>
+    <loc>https://AIIshanova.github.io/ru/</loc>
+    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://AIIshanova.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://AIIshanova.github.io/ru/"
                 />
   </url><url>
     <loc>https://AIIshanova.github.io/ru/post/</loc>
@@ -206,6 +180,18 @@
                 rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/publication_types/"
+                />
+  </url><url>
+    <loc>https://AIIshanova.github.io/ru/event/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://AIIshanova.github.io/event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://AIIshanova.github.io/ru/event/"
                 />
   </url><url>
     <loc>https://AIIshanova.github.io/ru/publication/</loc>

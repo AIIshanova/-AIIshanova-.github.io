@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Priject № 5 &#34;Epidemic&#34;" />
+  <meta name="description" content="Project № 5 &#34;Epidemic&#34;" />
 
   
     <link rel="alternate" hreflang="ru" href="https://AIIshanova.github.io/ru/project/example/" />
@@ -294,7 +294,7 @@
   <meta property="og:site_name" content="Ishanova A.I." />
   <meta property="og:url" content="https://AIIshanova.github.io/project/example/" />
   <meta property="og:title" content="Group project | Ishanova A.I." />
-  <meta property="og:description" content="Priject № 5 &#34;Epidemic&#34;" /><meta property="og:image" content="https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png" />
+  <meta property="og:description" content="Project № 5 &#34;Epidemic&#34;" /><meta property="og:image" content="https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -345,7 +345,7 @@
       "url": "https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Priject № 5 \"Epidemic\""
+  "description": "Project № 5 \"Epidemic\""
 }
 </script>
 
@@ -853,48 +853,50 @@ These variables (S, I, and R) represent the number of people in each compartment
 <blockquote>
 </blockquote>
 </blockquote>
-<p>function res = SIR(S0,I0,Ik,R0,a,b,tk)
-# getting parameters in ODE
-rate2 = @(t,state) rate(t,state,Ik,a,b);</p>
-<pre><code># solving ODE system
-[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+<pre><code>function res = SIR(S0,I0,Ik,R0,a,b,tk)
+     # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
 
-# extracting separate system parameters
-S = state(:,1);
-I = state(:,2);
-R = state(:,3);
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
 
-# drawing a graph
-hold on
-plot(T,S,'b')
-plot(T,I,'r')
-plot(T,R,'g')
-xlabel('Time')
-ylabel('Number of people')
-legend('S - Susceptible', 'I - Infectious', 'R - Recovered')
-title(&quot;SIR-model&quot;)
-</code></pre>
-<p>end</p>
-<p>`# ODE system
+    # extracting separate system parameters
+    S = state(:,1);
+    I = state(:,2);
+    R = state(:,3);
+
+   # drawing a graph
+    hold on
+    plot(T,S,'b')
+    plot(T,I,'r')
+    plot(T,R,'g')
+    xlabel('Time')
+    ylabel('Number of people')
+    legend('S - Susceptible', 'I - Infectious', 'R - Recovered')
+    title(&quot;SIR-model&quot;)
+end
+
+ `# ODE system
 function res = rate(t,state,Ik,a,b)
-#getting all initial stages
-s = state(1);
-i = state(2);
-r = state(3);</p>
-<pre><code># 
-if (i &gt; Ik)
-       dsdt = -a*s;
-       didt = a*s-b*i;
-       drdt = b*i;
-  else dsdt = 0;
-       didt = -b*i;
-       drdt = b*i;
-endif
-#
-# packing up everything
-res = [dsdt;didt;drdt];
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # ODE system
+    if (i &gt; Ik)
+          dsdt = -a*s;
+          didt = a*s-b*i;
+          drdt = b*i;
+      else dsdt = 0;
+           didt = -b*i;
+           drdt = b*i;
+     endif
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
 </code></pre>
-<p>end</p>
 <blockquote>
 <blockquote>
 </blockquote>
@@ -904,43 +906,45 @@ res = [dsdt;didt;drdt];
 <blockquote>
 </blockquote>
 </blockquote>
-<p>function res = SIR(S0,I0,Ik,R0,a,b,tk)
-# getting parameters in ODE
-rate2 = @(t,state) rate(t,state,Ik,a,b);</p>
-<pre><code># solving ODE system
-[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+<pre><code>function res = SIR(S0,I0,Ik,R0,a,b,tk)
+    # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
 
-# extracting separate system parameters
-S = state(:,1);
-I = state(:,2);
-R = state(:,3);
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
 
-# drawing a graph
-hold on
-plot(T,S,'b')
-plot(T,I,'r')
-plot(T,R,'g')
-xlabel('Time')
-ylabel('Number of people')
-legend('S - Susceptible', 'I - Infectious', 'R - Recovered')
-title(&quot;SIR-model&quot;)
-</code></pre>
-<p>end</p>
-<p>`# ODE system
+    # extracting separate system parameters
+   S = state(:,1);
+   I = state(:,2);
+   R = state(:,3);
+
+    # drawing a graph
+    hold on
+    plot(T,S,'b')
+    plot(T,I,'r')
+    plot(T,R,'g')
+    xlabel('Time')
+    ylabel('Number of people')
+    legend('S - Susceptible', 'I - Infectious', 'R - Recovered')
+    title(&quot;SIR-model&quot;)
+end
+
+ `# ODE system
 function res = rate(t,state,Ik,a,b)
-#getting all initial stages
-s = state(1);
-i = state(2);
-r = state(3);</p>
-<pre><code># 
-dsdt = heaviside(i-Ik)*(-a*s);
-didt = heaviside(i-Ik)*(a*s)-b*i;
-drdt = b*i;
-#
-# packing up everything
-res = [dsdt;didt;drdt];
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # 
+    dsdt = heaviside(i-Ik)*(-a*s);
+    didt = heaviside(i-Ik)*(a*s)-b*i;
+    drdt = b*i;
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
 </code></pre>
-<p>end</p>
 <blockquote>
 <blockquote>
 </blockquote>
@@ -1210,131 +1214,6 @@ res = [dsdt;didt;drdt];
 
       
       
-      
-        <h2>Events</h2>
-        
-          
-            
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/talk/example-talk/" >Example Talk</a>
-    </div>
-
-    
-    <a href="/talk/example-talk/"  class="summary-link">
-      <div class="article-style">
-        An example talk using Wowchemy&rsquo;s Markdown slides feature.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-      <div>
-        <span>
-          Jun 1, 2030 1:00 PM &mdash; 3:00 PM
-        </span>
-        
-        <span class="middot-divider"></span>
-        <span>Wowchemy HQ</span>
-        
-      </div>
-      
-
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="/project/example/">
-    Project
-  </a>
-  
-
-
-
-
-  
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://twitter.com/georgecushen" target="_blank" rel="noopener">
-    <i class="fab fa-twitter mr-1"></i>
-    Follow
-  </a>
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/talk/example-talk/" >
-      <img src="/talk/example-talk/featured_hu3d03a01dcc18bc5be0e67db3d8d209a6_620088_150x0_resize_q75_lanczos.jpg" alt="Example Talk" loading="lazy">
-    </a>
-    
-  </div>
-</div>
-
-          
-        
       
     </div>
   </div>

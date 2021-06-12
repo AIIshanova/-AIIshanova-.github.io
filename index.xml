@@ -5,32 +5,12 @@
     <link>https://AIIshanova.github.io/</link>
       <atom:link href="https://AIIshanova.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Ishanova A.I.</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png</url>
       <title>Ishanova A.I.</title>
       <link>https://AIIshanova.github.io/</link>
     </image>
-    
-    <item>
-      <title>Example Talk</title>
-      <link>https://AIIshanova.github.io/talk/example-talk/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://AIIshanova.github.io/talk/example-talk/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Hello, world!</title>
@@ -73,48 +53,50 @@ These variables (S, I, and R) represent the number of people in each compartment
 &lt;blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
-# getting parameters in ODE
-rate2 = @(t,state) rate(t,state,Ik,a,b);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# solving ODE system
-[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+&lt;pre&gt;&lt;code&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+     # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
 
-# extracting separate system parameters
-S = state(:,1);
-I = state(:,2);
-R = state(:,3);
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
 
-# drawing a graph
-hold on
-plot(T,S,&#39;b&#39;)
-plot(T,I,&#39;r&#39;)
-plot(T,R,&#39;g&#39;)
-xlabel(&#39;Time&#39;)
-ylabel(&#39;Number of people&#39;)
-legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
-title(&amp;quot;SIR-model&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
-&lt;p&gt;`# ODE system
+    # extracting separate system parameters
+    S = state(:,1);
+    I = state(:,2);
+    R = state(:,3);
+
+   # drawing a graph
+    hold on
+    plot(T,S,&#39;b&#39;)
+    plot(T,I,&#39;r&#39;)
+    plot(T,R,&#39;g&#39;)
+    xlabel(&#39;Time&#39;)
+    ylabel(&#39;Number of people&#39;)
+    legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+    title(&amp;quot;SIR-model&amp;quot;)
+end
+
+ `# ODE system
 function res = rate(t,state,Ik,a,b)
-#getting all initial stages
-s = state(1);
-i = state(2);
-r = state(3);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 
-if (i &amp;gt; Ik)
-       dsdt = -a*s;
-       didt = a*s-b*i;
-       drdt = b*i;
-  else dsdt = 0;
-       didt = -b*i;
-       drdt = b*i;
-endif
-#
-# packing up everything
-res = [dsdt;didt;drdt];
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # ODE system
+    if (i &amp;gt; Ik)
+          dsdt = -a*s;
+          didt = a*s-b*i;
+          drdt = b*i;
+      else dsdt = 0;
+           didt = -b*i;
+           drdt = b*i;
+     endif
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;/blockquote&gt;
@@ -124,43 +106,45 @@ res = [dsdt;didt;drdt];
 &lt;blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
-# getting parameters in ODE
-rate2 = @(t,state) rate(t,state,Ik,a,b);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# solving ODE system
-[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+&lt;pre&gt;&lt;code&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+    # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
 
-# extracting separate system parameters
-S = state(:,1);
-I = state(:,2);
-R = state(:,3);
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
 
-# drawing a graph
-hold on
-plot(T,S,&#39;b&#39;)
-plot(T,I,&#39;r&#39;)
-plot(T,R,&#39;g&#39;)
-xlabel(&#39;Time&#39;)
-ylabel(&#39;Number of people&#39;)
-legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
-title(&amp;quot;SIR-model&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
-&lt;p&gt;`# ODE system
+    # extracting separate system parameters
+   S = state(:,1);
+   I = state(:,2);
+   R = state(:,3);
+
+    # drawing a graph
+    hold on
+    plot(T,S,&#39;b&#39;)
+    plot(T,I,&#39;r&#39;)
+    plot(T,R,&#39;g&#39;)
+    xlabel(&#39;Time&#39;)
+    ylabel(&#39;Number of people&#39;)
+    legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+    title(&amp;quot;SIR-model&amp;quot;)
+end
+
+ `# ODE system
 function res = rate(t,state,Ik,a,b)
-#getting all initial stages
-s = state(1);
-i = state(2);
-r = state(3);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 
-dsdt = heaviside(i-Ik)*(-a*s);
-didt = heaviside(i-Ik)*(a*s)-b*i;
-drdt = b*i;
-#
-# packing up everything
-res = [dsdt;didt;drdt];
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # 
+    dsdt = heaviside(i-Ik)*(-a*s);
+    didt = heaviside(i-Ik)*(a*s)-b*i;
+    drdt = b*i;
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;/blockquote&gt;

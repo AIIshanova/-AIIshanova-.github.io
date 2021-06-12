@@ -43,48 +43,50 @@ These variables (S, I, and R) represent the number of people in each compartment
 &lt;blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
-# getting parameters in ODE
-rate2 = @(t,state) rate(t,state,Ik,a,b);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# solving ODE system
-[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+&lt;pre&gt;&lt;code&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+     # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
 
-# extracting separate system parameters
-S = state(:,1);
-I = state(:,2);
-R = state(:,3);
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
 
-# drawing a graph
-hold on
-plot(T,S,&#39;b&#39;)
-plot(T,I,&#39;r&#39;)
-plot(T,R,&#39;g&#39;)
-xlabel(&#39;Time&#39;)
-ylabel(&#39;Number of people&#39;)
-legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
-title(&amp;quot;SIR-model&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
-&lt;p&gt;`# ODE system
+    # extracting separate system parameters
+    S = state(:,1);
+    I = state(:,2);
+    R = state(:,3);
+
+   # drawing a graph
+    hold on
+    plot(T,S,&#39;b&#39;)
+    plot(T,I,&#39;r&#39;)
+    plot(T,R,&#39;g&#39;)
+    xlabel(&#39;Time&#39;)
+    ylabel(&#39;Number of people&#39;)
+    legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+    title(&amp;quot;SIR-model&amp;quot;)
+end
+
+ `# ODE system
 function res = rate(t,state,Ik,a,b)
-#getting all initial stages
-s = state(1);
-i = state(2);
-r = state(3);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 
-if (i &amp;gt; Ik)
-       dsdt = -a*s;
-       didt = a*s-b*i;
-       drdt = b*i;
-  else dsdt = 0;
-       didt = -b*i;
-       drdt = b*i;
-endif
-#
-# packing up everything
-res = [dsdt;didt;drdt];
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # ODE system
+    if (i &amp;gt; Ik)
+          dsdt = -a*s;
+          didt = a*s-b*i;
+          drdt = b*i;
+      else dsdt = 0;
+           didt = -b*i;
+           drdt = b*i;
+     endif
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;/blockquote&gt;
@@ -94,43 +96,45 @@ res = [dsdt;didt;drdt];
 &lt;blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
-# getting parameters in ODE
-rate2 = @(t,state) rate(t,state,Ik,a,b);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# solving ODE system
-[T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+&lt;pre&gt;&lt;code&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+    # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
 
-# extracting separate system parameters
-S = state(:,1);
-I = state(:,2);
-R = state(:,3);
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
 
-# drawing a graph
-hold on
-plot(T,S,&#39;b&#39;)
-plot(T,I,&#39;r&#39;)
-plot(T,R,&#39;g&#39;)
-xlabel(&#39;Time&#39;)
-ylabel(&#39;Number of people&#39;)
-legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
-title(&amp;quot;SIR-model&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
-&lt;p&gt;`# ODE system
+    # extracting separate system parameters
+   S = state(:,1);
+   I = state(:,2);
+   R = state(:,3);
+
+    # drawing a graph
+    hold on
+    plot(T,S,&#39;b&#39;)
+    plot(T,I,&#39;r&#39;)
+    plot(T,R,&#39;g&#39;)
+    xlabel(&#39;Time&#39;)
+    ylabel(&#39;Number of people&#39;)
+    legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+    title(&amp;quot;SIR-model&amp;quot;)
+end
+
+ `# ODE system
 function res = rate(t,state,Ik,a,b)
-#getting all initial stages
-s = state(1);
-i = state(2);
-r = state(3);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 
-dsdt = heaviside(i-Ik)*(-a*s);
-didt = heaviside(i-Ik)*(a*s)-b*i;
-drdt = b*i;
-#
-# packing up everything
-res = [dsdt;didt;drdt];
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # 
+    dsdt = heaviside(i-Ik)*(-a*s);
+    didt = heaviside(i-Ik)*(a*s)-b*i;
+    drdt = b*i;
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;end&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;/blockquote&gt;
