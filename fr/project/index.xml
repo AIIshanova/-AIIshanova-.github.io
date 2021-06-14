@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Ishanova A.I.</title>
+    <link>https://AIIshanova.github.io/fr/project/</link>
+      <atom:link href="https://AIIshanova.github.io/fr/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr</language><lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>https://AIIshanova.github.io/fr/project/</link>
+    </image>
+    
+    <item>
+      <title>Projet de groupe</title>
+      <link>https://AIIshanova.github.io/fr/project/example/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://AIIshanova.github.io/fr/project/example/</guid>
+      <description>&lt;p&gt;Co-auteurs: Smorodova D., Shutenko V., Surtzov S. and Firtsov I.&lt;/p&gt;
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+&lt;p&gt;Un petit projet à l&amp;rsquo;université.&lt;/p&gt;
+&lt;h2 id=&#34;model&#34;&gt;Model&lt;/h2&gt;
+&lt;h3 id=&#34;model-sir&#34;&gt;Model SIR&lt;/h3&gt;
+&lt;p&gt;Les modèles mathématiques de maladies infectieuses, d&amp;rsquo;abord outils purement théoriques, ont commencé à être mis en pratique avec le problème du SIDA dans les années 1980. Lors de la pandémie Covid 19, les modélisations mathématiques ont connu un essor lors de la prise de décision relatives aux politiques de santé publique et a également contribué à l&amp;rsquo;épidémiosurveillance de la maladie.&lt;/p&gt;
+&lt;p&gt;Bien avant cela, depuis la pandémie de grippe espagnole, des modèles compartimentaux sont utilisés pour faciliter les calculs de probabilité de contagion. Ces modèles divisent la population en classes épidémiologiques.&lt;/p&gt;
+&lt;p&gt;Un modèle épidémiologique se fonde sur deux concepts : les compartiments et les règles. Les compartiments divisent la population en divers états possibles par rapport à la maladie. Par exemple, William Ogilvy Kermack et Anderson Gray McKendrick proposèrent un modèle fondateur dans lequel la population était divisée entre les individus susceptibles de contracter la maladie (compartiment {\displaystyle S}S), et les individus infectieux (compartiment {\displaystyle I}I)B 1. Les règles spécifient la proportion des individus passant d&amp;rsquo;un compartiment à un autre. Ainsi, dans un cas à deux compartiments, il existe une proportion {\displaystyle p(S\to I)}{\displaystyle p(S\to I)} d&amp;rsquo;individus sains devenant infectés et, selon les maladies, il peut aussi exister une proportion {\displaystyle p(I\to S)}{\displaystyle p(I\to S)} d&amp;rsquo;individus infectieux étant guéris. L&amp;rsquo;acronyme utilisé pour un modèle est généralement fondé sur l&amp;rsquo;ordre de ses règles. Dans le modèle {\displaystyle SIR}{\displaystyle SIR}, un individu est initialement sain ({\displaystyle S}S), peut devenir infecté ({\displaystyle I}I) puis être guéri ({\displaystyle R}R) ; si la guérison n&amp;rsquo;était pas possible, alors il s&amp;rsquo;agirait d&amp;rsquo;un modèle {\displaystyle SI}{\displaystyle SI}C 2.&lt;/p&gt;
+&lt;p&gt;Un individu infecté par le VIH est plus infectieux durant la 1re phase, lorsque sa charge virale (rouge) atteint un pic. L&amp;rsquo;infectivité par contact serait de l&amp;rsquo;ordre de 0,05, tandis qu&amp;rsquo;une infectivité de 0,003 représenterait une phase plus tardive de la maladieA 1.
+Sept compartiments sont couramment utilisés : {\displaystyle S}S, {\displaystyle I}I, {\displaystyle E}E, {\displaystyle D}D, {\displaystyle R}R, {\displaystyle M}M et {\displaystyle C}C. Le compartiment {\displaystyle S}S est nécessaire, puisqu&amp;rsquo;il doit initialement exister des individus n&amp;rsquo;ayant pas encore été infectés. Lorsqu&amp;rsquo;un individu du compartiment {\displaystyle S}S est exposé à la maladie, il ne devient pas nécessairement capable de la transmettre immédiatement, selon l&amp;rsquo;échelle de temps considérée dans le modèle. Par exemple, si la maladie nécessite deux semaines pour rendre l&amp;rsquo;individu infectieux (ce qui est appelé une période de latence de deux semaines) et que le modèle représente l&amp;rsquo;évolution journalière de la population, alors l&amp;rsquo;individu ne va pas directement dans le compartiment {\displaystyle I}I (infectieux) mais doit passer par un compartiment intermédiaire. Un tel compartiment est noté {\displaystyle E}E, pour les individus exposés.&lt;/p&gt;
+&lt;p&gt;Selon les maladies, il peut être utile de distinguer les individus infectés. Si la maladie est causée par des organismes parasites tel le ver parasite ou les tiques, alors la concentration de ces organismes peut justifier de diviser la classe {\displaystyle I}I en plusieurs classes représentant plusieurs niveaux de concentration. Lorsque la maladie est causée par des virus ou des bactéries, un grand nombre de modèles ne divisent pas la classe {\displaystyle I}I : ils considèrent que l&amp;rsquo;individu est infecté ou ne l&amp;rsquo;est pasC 3. Cependant, dans le cas d&amp;rsquo;un virus, il existe un analogue à la concentration en organismes parasitaires : il s&amp;rsquo;agit de la charge virale, qui exprime la concentration du virus dans un volume donné tel que le sang. Les individus peuvent donc être distingués selon leur charge, puisque celle-ci les rend infectieux à des niveaux différents, ainsi qu&amp;rsquo;illustré ci-contre dans le cas du VIH.&lt;/p&gt;
+&lt;p&gt;Après qu&amp;rsquo;un individu a été infecté, trois cas de figure peuvent se produire. Premièrement, l&amp;rsquo;individu peut décéder, auquel cas il relève du compartiment {\displaystyle D}D. Deuxièmement, la maladie peut se terminer d&amp;rsquo;elle-même et conférer à l&amp;rsquo;individu une immunisation contre la réinfection, et il est assigné à un compartiment {\displaystyle R}R. Enfin, l&amp;rsquo;individu peut toujours être infectieux mais il se retrouve isolé de la population par politique de quarantaine, correspond à un compartiment {\displaystyle Q}QE 1. Séparer les individus morts des individus en quarantaine permet également de tenir compte du fait que ces derniers peuvent éventuellement guérir et réintégrer le compartiment {\displaystyle S}S. Outre les compartiments cités, {\displaystyle M}M représente les individus disposant d&amp;rsquo;une immunité à la naissance (par voie maternelle), et {\displaystyle C}C représente les individus porteurs de la maladie (carriers) mais qui n&amp;rsquo;en expriment pas les symptômes.&lt;/p&gt;
+&lt;h2 id=&#34;octave-code&#34;&gt;Octave code&lt;/h2&gt;
+&lt;h3 id=&#34;if-else&#34;&gt;if-else&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+     # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
+
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+
+    # extracting separate system parameters
+    S = state(:,1);
+    I = state(:,2);
+    R = state(:,3);
+
+   # drawing a graph
+    hold on
+    plot(T,S,&#39;b&#39;)
+    plot(T,I,&#39;r&#39;)
+    plot(T,R,&#39;g&#39;)
+    xlabel(&#39;Time&#39;)
+    ylabel(&#39;Number of people&#39;)
+    legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+    title(&amp;quot;SIR-model&amp;quot;)
+end
+
+ `# ODE system
+function res = rate(t,state,Ik,a,b)
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # ODE system
+    if (i &amp;gt; Ik)
+          dsdt = -a*s;
+          didt = a*s-b*i;
+          drdt = b*i;
+      else dsdt = 0;
+           didt = -b*i;
+           drdt = b*i;
+     endif
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;heaviside&#34;&gt;heaviside&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;function res = SIR(S0,I0,Ik,R0,a,b,tk)
+    # getting parameters in ODE
+    rate2 = @(t,state) rate(t,state,Ik,a,b);
+
+    # solving ODE system
+    [T,state] = ode23(rate2,[0,tk],[S0,I0,R0]); #soulving Cauchy problem
+
+    # extracting separate system parameters
+   S = state(:,1);
+   I = state(:,2);
+   R = state(:,3);
+
+    # drawing a graph
+    hold on
+    plot(T,S,&#39;b&#39;)
+    plot(T,I,&#39;r&#39;)
+    plot(T,R,&#39;g&#39;)
+    xlabel(&#39;Time&#39;)
+    ylabel(&#39;Number of people&#39;)
+    legend(&#39;S - Susceptible&#39;, &#39;I - Infectious&#39;, &#39;R - Recovered&#39;)
+    title(&amp;quot;SIR-model&amp;quot;)
+end
+
+ `# ODE system
+function res = rate(t,state,Ik,a,b)
+    #getting all initial stages
+    s = state(1);
+    i = state(2);
+    r = state(3);
+
+    # 
+    dsdt = heaviside(i-Ik)*(-a*s);
+    didt = heaviside(i-Ik)*(a*s)-b*i;
+    drdt = b*i;
+    #
+    # packing up everything
+    res = [dsdt;didt;drdt];
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;les-sources&#34;&gt;Les sources&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Compartmental models in epidemiology - &lt;a href=&#34;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&#34;&gt;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;А.В. Гаврилина , С.В. Соколов&lt;/em&gt; - Анализ SIR-модели распространения заболеваний, pp 229-232, 2018.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project individuel</title>
+      <link>https://AIIshanova.github.io/fr/project/personal-project/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://AIIshanova.github.io/fr/project/personal-project/</guid>
+      <description>&lt;p&gt;Un petit projet universitaire.&lt;/p&gt;
+&lt;p&gt;Création d&amp;rsquo;un site pouvant servir de carte professionelle à partir d&amp;rsquo;un modèle donné.&lt;/p&gt;
+&lt;p&gt;Vous l&amp;rsquo;utilisez en ce moment. :)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

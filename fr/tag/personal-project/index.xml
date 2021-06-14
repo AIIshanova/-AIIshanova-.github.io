@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal project | Ishanova A.I.</title>
+    <link>https://AIIshanova.github.io/fr/tag/personal-project/</link>
+      <atom:link href="https://AIIshanova.github.io/fr/tag/personal-project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Personal project</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr</language><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://AIIshanova.github.io/media/icon_huf1a9e91e5e78e6ae9b59f277960e3089_382832_512x512_fill_lanczos_center_2.png</url>
+      <title>Personal project</title>
+      <link>https://AIIshanova.github.io/fr/tag/personal-project/</link>
+    </image>
+    
+    <item>
+      <title>Project individuel</title>
+      <link>https://AIIshanova.github.io/fr/project/personal-project/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://AIIshanova.github.io/fr/project/personal-project/</guid>
+      <description>&lt;p&gt;Un petit projet universitaire.&lt;/p&gt;
+&lt;p&gt;Création d&amp;rsquo;un site pouvant servir de carte professionelle à partir d&amp;rsquo;un modèle donné.&lt;/p&gt;
+&lt;p&gt;Vous l&amp;rsquo;utilisez en ce moment. :)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

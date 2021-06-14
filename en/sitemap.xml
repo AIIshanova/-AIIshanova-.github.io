@@ -6,6 +6,11 @@
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/categories/"
                 />
@@ -17,6 +22,11 @@
   </url><url>
     <loc>https://AIIshanova.github.io/category/demo/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/category/demo/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -32,6 +42,11 @@
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/post/hello/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/post/hello/"
                 />
@@ -43,6 +58,11 @@
   </url><url>
     <loc>https://AIIshanova.github.io/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -58,6 +78,11 @@
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/tag/personal/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/tag/personal/"
                 />
@@ -69,6 +94,11 @@
   </url><url>
     <loc>https://AIIshanova.github.io/post/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/post/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -84,6 +114,11 @@
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/tags/"
                 />
@@ -95,6 +130,11 @@
   </url><url>
     <loc>https://AIIshanova.github.io/tag/group-project/</loc>
     <lastmod>2021-05-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/tag/group-project/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -110,6 +150,11 @@
     <lastmod>2021-05-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/project/example/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/project/example/"
                 />
@@ -121,6 +166,11 @@
   </url><url>
     <loc>https://AIIshanova.github.io/project/</loc>
     <lastmod>2021-05-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/project/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -136,6 +186,11 @@
     <lastmod>2021-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/project/personal-project/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/project/personal-project/"
                 />
@@ -147,6 +202,11 @@
   </url><url>
     <loc>https://AIIshanova.github.io/tag/personal-project/</loc>
     <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/tag/personal-project/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -161,6 +221,11 @@
     <loc>https://AIIshanova.github.io/admin/</loc>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/admin/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/admin/"
                 />
@@ -171,6 +236,11 @@
                 />
   </url><url>
     <loc>https://AIIshanova.github.io/publication_types/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/publication_types/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -185,6 +255,11 @@
     <loc>https://AIIshanova.github.io/publication/</loc>
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ru"
                 href="https://AIIshanova.github.io/ru/publication/"
                 />
@@ -195,6 +270,11 @@
                 />
   </url><url>
     <loc>https://AIIshanova.github.io/event/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://AIIshanova.github.io/fr/event/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
